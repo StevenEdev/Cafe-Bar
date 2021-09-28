@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Menú</title>
+	
+		<!-- Favicons -->
+	<link href="assets/img/favicon.png" rel="icon">
+	<link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+
+	<!-- Dependencias CSS  -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+	crossorigin="anonymous">
+
+	<!-- Archivo CSS especifico del componente -->
+	<link href="assets/css/style.css" rel="stylesheet">
+	<link href="assets/css/menu.css" rel="stylesheet">
+	<link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+
+
+	<body class="body">
+
+		<!-- ======= Header ======= -->
+		<header style="background: rgba(12, 11, 9, 0.6);" id="header" class="fixed-top d-flex align-items-cente">
+
+			<div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
+
+				<h1 class="logo me-auto me-lg-0"><a href="index.html">EL CAFECITO</a></h1>
+
+				<nav id="navbar" class="navbar order-last order-lg-0">
+					<ul>
+						<li class="nav-item">
+							<a class="nav-link  " href="../index.html">Inicio</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="Nosotros.html">Nosotros</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link active" href="#">Menu</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link " href="Servicios.html">Servicios</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link " href="contactenos.html">Contacto</a>
+						</li>
+						
+					</ul>
+					<i class="bi bi-list mobile-nav-toggle"></i>
+            </nav>
+            <!-- .navbar -->
+            <a href="carrito.html" class="book-a-table-btn scrollto d-none d-lg-flex section-bg2"><i class="bi bi-cart"></i></a>
+
+        </div>
+
+    </header>
+
+    <!-- Fin Header -->
+
+    <div class="container">
+        <div class="min-header">
+            <div class="flex-item-left">
+                <h1 class="menu">Menù</h1>
+            </div>
+            <div class="flex-item-right">
+                <button type="button" class="button-descargar">Descargar Menú</button>
+            </div>
+        </div>
+
+         <!-- ======= Menu Section ======= -->
+        <section id="menu" class="menu section-bg">
+            <div class="container" data-aos="fade-up">
+                <div class="row menu-container" data-aos="fade-up" data-aos-delay="200">
+
+                    <div class="col-lg-6 menu-item filter-starters">
+                        <img src="assets/img/menu/lobster-bisque.jpg" class="menu-img" alt="">
+                        <div class="menu-content">
+                            <a href="#">Langosta</a><span>$15.95</span>
+                        </div>
+                        <div class="menu-ingredients">
+                          Exquisita y fresca Langosta entera
+                          <button class="btn-infor" data-bs-toggle="modal" 
+                          data-bs-target="#modal1">Más información</button>
+                        </div>
+                        <!-- Modal -->
+                        <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Langosta</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <img></img>
+                                    <div class="modal-body">
+                                      Langosta a la mantequilla de perejil y limón
+                                    </div>
+                                                                        <div>
+                                      <a href="/Contactenos/contactenos.html" class="btn-contact">Contáctenos</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 menu-item filter-specialty">
+                        <img src="assets/img/menu/bread-barrel.jpg" class="menu-img" alt="">
+                        <div class="menu-content">
+                            <a href="#">Pan</a><span>$6.95</span>
+                        </div>
+                        <div class="menu-ingredients">
+                            Delcioso pan para acompañar con un buen café
+                            <button class="btn-infor" data-bs-toggle="modal" 
+                          data-bs-target="#modal2">Más información</button>
+                        </div>
+                        <!-- Modal -->
+                        <div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Pan</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <img></img>
+                                    <div class="modal-body">
+                                      Pan de avena para acompañar con un buen café
+                                    </div>
+                                                                        <div>
+                                      <a href="/Contactenos/contactenos.html" class="btn-contact">Contáctenos</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 menu-item filter-starters">
+                        <img src="assets/img/menu/cake.jpg" class="menu-img" alt="">
+                        <div class="menu-content">
+                            <a href="#">Pastel de cangrejo</a><span>$7.95</span>
+                        </div>
+                        <div class="menu-ingredients">
+                            Un delicado pastel de cangrejo
+                            <button class="btn-infor" data-bs-toggle="modal" 
+                          data-bs-target="#modal3">Más información</button>
+                        </div>
+                        <!-- Modal -->
+                        <div class="modal fade" id="modal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Pastel de cangrejo</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <img></img>
+                                    <div class="modal-body">
+                                       Un delicado pastel de cangrejo servido en un panecillo tostado con lechuga y salsa tártara
+                                    </div>
+                                                                        <div>
+                                      <a href="/Contactenos/contactenos.html" class="btn-contact">Contáctenos</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 menu-item filter-salads">
+                        <img src="assets/img/menu/caesar.jpg" class="menu-img" alt="">
+                        <div class="menu-content">
+                            <a href="#">Ensalada César</a><span>$8.95</span>
+                        </div>
+                        <div class="menu-ingredients">
+                            Ensalada César con pollo, quesos y tomates cherry.
+                            <button class="btn-infor" data-bs-toggle="modal" 
+                          data-bs-target="#modal4">Más información</button>
+                        </div>
+                        <!-- Modal -->
+                        <div class="modal fade" id="modal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Ensalada César</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <img></img>
+                                    <div class="modal-body">
+                                      Una ensalada César es una ensalada de lechuga romana y croûtons (trozos de pan tostado) con jugo de limón, aceite de oliva, huevo, salsa Worcestershire, anchoas, ajo, mostaza de Dijon, queso parmesano y pimienta negra, tomates cherry y pollo
+                                    </div>
+                                                                        <div>
+                                      <a href="/Contactenos/contactenos.html" class="btn-contact">Contáctenos</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 menu-item filter-specialty">
+                        <img src="assets/img/menu/tuscan-grilled.jpg" class="menu-img" alt="">
+                        <div class="menu-content">
+                            <a href="#">Toscano a la parrilla</a><span>$9.95</span>
+                        </div>
+                        <div class="menu-ingredients">
+                            Pollo a la plancha con provolone, corazones de alcachofa y pesto rojo asado
+                            <button class="btn-infor" data-bs-toggle="modal" 
+                          data-bs-target="#modal5">Más información</button>
+                        </div>
+                        <!-- Modal -->
+                        <div class="modal fade" id="modal5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Pollo toscano</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <img></img>
+                                    <div class="modal-body">
+                                      El pollo toscano a la parrilla es tomate, mozzarella, albahaca y jamón relleno de crema balsámica con provolone, corazones de alcachofa y pesto rojo asado
+                                    </div>
+                                                                        <div>
+                                      <a href="/Contactenos/contactenos.html" class="btn-contact">Contáctenos</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 menu-item filter-starters">
+                        <img src="assets/img/menu/mozzarella.jpg" class="menu-img" alt="">
+                        <div class="menu-content">
+                            <a href="#">Palito de Mozzarella</a><span>$4.95</span>
+                        </div>
+                        <div class="menu-ingredients">
+                            Queso Mozzarella acompañdo de frutas frescas
+                            <button class="btn-infor" data-bs-toggle="modal" 
+                          data-bs-target="#modal6">Más información</button>
+                        </div>
+                        <!-- Modal -->
+                        <div class="modal fade" id="modal6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Palito Mozzarella</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <img></img>
+                                    <div class="modal-body">
+                                      Queso Mozzarella acompañdo de frutas frescas, tomates, Sal y pimienta, aceite de oliva virgen extra, albahaca fresca, alcaparras
+                                    </div>
+                                                                        <div>
+                                      <a href="/Contactenos/contactenos.html" class="btn-contact">Contáctenos</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 menu-item filter-salads">
+                        <img src="assets/img/menu/greek-salad.jpg" class="menu-img" alt="">
+                        <div class="menu-content">
+                            <a href="#">Ensalada griega</a><span>$9.95</span>
+                        </div>
+                        <div class="menu-ingredients">
+                            Espinaca fresca, lechuga romana crujiente, tomates y aceitunas griegas
+                            <button class="btn-infor" data-bs-toggle="modal" 
+                          data-bs-target="#modal7">Más información</button>
+                        </div>
+                        <!-- Modal -->
+                        <div class="modal fade" id="modal7" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Ensalada griega</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <img></img>
+                                    <div class="modal-body">
+                                      Ensalada griega, con tomate, pepino, cebolla, aceitunas negras y queso feta. 
+                                    </div>
+                                                                        <div>
+                                      <a href="/Contactenos/contactenos.html" class="btn-contact">Contáctenos</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 menu-item filter-salads">
+                        <img src="assets/img/menu/spinach-salad.jpg" class="menu-img" alt="">
+                        <div class="menu-content">
+                            <a href="#">Ensalada de espinaca</a><span>$9.95</span>
+                        </div>
+                        <div class="menu-ingredients">
+                            Espinaca fresca con champiñones, huevo duro y vinagreta tibia de tocino
+                            <button class="btn-infor" data-bs-toggle="modal" 
+                          data-bs-target="#modal8">Más información</button>
+                        </div>
+                        <!-- Modal -->
+                        <div class="modal fade" id="modal8" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Ensalada de espinaca</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <img></img>
+                                    <div class="modal-body">
+                                    Espinaca fresca con champiñones, huevo duro y vinagreta tibia de tocino, tomate, cebolla, brocoli, zanahoria, aguacate, etc.
+                                    </div>
+                                                                        <div>
+                                      <a href="/Contactenos/contactenos.html" class="btn-contact">Contáctenos</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 menu-item filter-specialty">
+                        <img src="assets/img/menu/lobster-roll.jpg" class="menu-img" alt="">
+                        <div class="menu-content">
+                            <a href="#">Rollo de langosta</a><span>$12.95</span>
+                        </div>
+                        <div class="menu-ingredients">
+                            Carne de langosta regordeta
+                            <button class="btn-infor" data-bs-toggle="modal" 
+                          data-bs-target="#modal9">Más información</button>
+                        </div>
+                        <!-- Modal -->
+                        <div class="modal fade" id="modal9" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Rollo de langosta</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <img></img>
+                                    <div class="modal-body">
+                                      Carne de langosta regordeta, mayonesa y lechuga crujiente en un rollo voluminoso tostado
+                                    </div>
+                                                                        <div>
+                                      <a href="/Contactenos/contactenos.html" class="btn-contact">Contáctenos</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 menu-item filter-specialty">
+                        <img src="assets/img/specials-1.png" class="menu-img" alt="">
+                        <div class="menu-content">
+                            <a href="#">Pollo</a><span>$12.95</span>
+                        </div>
+                        <div class="menu-ingredients">
+                            Pollo en salsa curry
+                            <button class="btn-infor" data-bs-toggle="modal" 
+                          data-bs-target="#modal10">Más información</button>
+                        </div>
+                        <!-- Modal -->
+                        <div class="modal fade" id="modal10" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Pollo</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <img></img>
+                                    <div class="modal-body">
+                                      Una porción de arroz con pollo al curry, tomate, cebolla, lechuga y pepino
+                                    </div>
+                                                                        <div>
+                                      <a href="/Contactenos/contactenos.html" class="btn-contact">Contáctenos</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 menu-item filter-specialty">
+                        <img src="assets/img/specials-1.png" class="menu-img" alt="">
+                        <div class="menu-content">
+                            <a href="#">Camarón</a><span>$12.95</span>
+                        </div>
+                        <div class="menu-ingredients">
+                            Encocado de Camarones
+                            <button class="btn-infor" data-bs-toggle="modal" 
+                          data-bs-target="#modal11">Más información</button>
+                        </div>
+                        <!-- Modal -->
+                        <div class="modal fade" id="modal11" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Camarón</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <img></img>
+                                    <div class="modal-body">
+                                      Encocado de Camarones, unos suculentos camarones en salsa de coco
+                                    </div>
+                                                                        <div>
+                                      <a href="/Contactenos/contactenos.html" class="btn-contact">Contáctenos</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 menu-item filter-specialty">
+                        <img src="assets/img/specials-3.png" class="menu-img" alt="">
+                        <div class="menu-content">
+                            <a href="#">Pasta</a><span>$12.95</span>
+                        </div>
+                        <div class="menu-ingredients">
+                            Sopa de fideos
+                            <button class="btn-infor" data-bs-toggle="modal" 
+                          data-bs-target="#modal12">Más información</button>
+                        </div>
+                        <!-- Modal -->
+                        <div class="modal fade" id="modal12" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Pasta</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <img></img>
+                                    <div class="modal-body">
+                                       Sopa de fideos, incluye zanahorias, pimientos rojos, pollo deshuesado, apio, cebollas
+                                    </div>
+                                                                        <div>
+                                      <a href="/Contactenos/contactenos.html" class="btn-contact">Contáctenos</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section><!-- End Menu Section -->
+        
+        <div class="navi-container">
+            <nav aria-label="...">
+                <ul class="pagination">
+                    <li class="page-item " id="anterior">
+                        <a class="btn-anterior " href="#" tabindex="-1" aria-disabled="true"><i
+                                class="arrow-left bi-chevron-left"></i>Anterior</a>
+                    </li>
+                    <li class="page-item" id="siguiente">
+                        <a class="btn-siguiente" href="menu2.html">Siguiente<i
+                                class="arrow-right bi-chevron-right"></i></a>
+
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        </div>
+
+    </main>
+
+
+ <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-info">
+              <h3>EL CAFECITO</h3>
+              <p>
+                Calle siempre Viva 123, Springfield<br><br>
+                <strong>Telefono:</strong> +57 3124567658<br>
+                <strong>Email:</strong> info@ejemplo.com<br>
+              </p>
+                            <div class="social-links mt-3">
+                                <a href="#" class="twitter"><i class="bi bi-facebook"></i></i></a>
+                                <a href="#" class="facebook"><i class="bi bi-twitter"></i></i></a>
+                                <a href="#" class="instagram"><i class="bi bi-instagram"></i></i></a>
+                                <a href="#" class="google-plus"><i class="bi bi-skype"></i></i></a>
+                                <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+                            </div>
+            </div>
+          </div>
+
+        <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Navegación</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="index.html">Inicio</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="Nosotros.html">Nosotros</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="Menu.html">Menu</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="Servicios.html">Servicios</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="contactenos.html">Contacto</a></li>
+                        </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Servicios</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="Servicios.html#cumple">Celebración de cumpleaños</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="Servicios.html#aniversario">Aniversarios</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="Servicios.html#infantil">Fiestas infantiles</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="Servicios.html#propuestas">Declaraciones o propuestas</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="Servicios.html#despedidas">Despedidas</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="Servicios.html#cena">Cena con amigos</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>¿Buscas descuentos?</h4>
+            <p>Entra en nuestra red de restaurantes</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribete">
+            </form>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  
+  </footer><!-- End Footer -->
+
+    <!-- Dependencias JS  -->
+    <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js "
+        integrity=" sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ "
+        crossorigin=" anonymous "></script>
+    <script src="../assets/js/main.js "></script>
+</body>
+
+</html>
