@@ -316,13 +316,9 @@ a:hover {
 }
 
 .btn-infor{
-  color: #fff;
+  color: #cda45e;
   background-color: transparent;
   border: none;
-}
-
-.btn-infor:hover{
-  color:#cda45e;
 }
 
 
