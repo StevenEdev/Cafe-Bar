@@ -8,6 +8,10 @@ body {
     color: #fff;
 }
 
+.bi-cart {
+    font-size: 20px;
+}
+
 a {
     color: #cda45e;
     text-decoration: none;
