@@ -29,9 +29,9 @@ const campos = {
     documento: false,
     telefono: false,
     servicio: false,
-    personas: false,
-    fecha: false,
-    hora: false
+    personas: true,
+    fecha: true,
+    hora: true
 
 }
 
@@ -48,15 +48,6 @@ const ValidarFormulario = (e) => {
             break;
         case "telefono":
             ValidarCampo(expresiones.telefono, e.target, "telefono");
-            break;
-        case "servicio":
-            validarSelect();
-            break;
-        case "Ciudad":
-            ValidarCampo(expresiones.nombre, e.target, "Ciudad");
-            break;
-        case "Direccion":
-            ValidarCampo(expresiones.nombre, e.target, "Direccion");
             break;
     }
 };
@@ -85,34 +76,35 @@ const ValidarCampo = (expresiones, input, campo) => {
             .classList.add("formulario__input-error-activo");
         campos[campo] = false;
     }
+    console.log(input.value + " -- " + campos[campo]);
+
 };
 
-function validarSelect() {
-    var reserva = document.getElementById('reserva');
-    if (reserva.value == 0 ||
-        reserva.value == "") {
-        document
-            .getElementById(`grupo__reserva`)
-            .classList.add("formulario__select-error");
-        document
-            .getElementById(`grupo__reserva`)
-            .classList.remove(".formulario__select-correcto");
-        document
-            .querySelector(`#grupo__reserva .formulario__input-error`)
-            .classList.add("formulario__input-error-activo");
+function validarSelect(campo) {
+    var servicio = document.getElementById(campo);
+
+    if (servicio.value == 0 ||
+        servicio.value == "") {
+        document.getElementById(`grupo__${campo}`).classList.add("formulario__select-error");
+        document.getElementById(`grupo__${campo}`).classList.remove(".formulario__select-correcto");
+        document.querySelector(`#grupo__${campo} .formulario__select-error`)
+            .classList.add("formulario__select-error-activo");
         campos[campo] = false;
     } else {
         document
-            .getElementById(`grupo__reserva`)
+            .getElementById(`grupo__servicio`)
             .classList.remove("formulario__select-error");
         document
-            .getElementById(`grupo__reserva`)
+            .getElementById(`grupo__servicio`)
             .classList.add(".formulario__select-correcto");
         document
-            .querySelector(`#grupo__reserva .formulario__input-error`)
-            .classList.remove("formulario__input-error-activo");
+            .querySelector(`#grupo__servicio .formulario__select-error`)
+            .classList.remove("formulario__select-error-activo");
         campos[campo] = true;
     }
+
+    console.log(servicio.value + " -- " + campos[campo]);
+
 }
 
 
@@ -124,7 +116,9 @@ inputs.forEach((input) => {
 formulario.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    const terminos = document.getElementById('Terminos');
+    const terminos = document.getElementById('terminos');
+
+    validarSelect("servicio");
 
     if (campos.nombre &&
         campos.email &&
@@ -135,13 +129,16 @@ formulario.addEventListener("submit", (e) => {
         campos.hora &&
         campos.fecha &&
         terminos.checked) {
+
+
+
         formulario.reset();
 
         document.querySelectorAll('.formulario__grupo--correcto').forEach((error) => {
             error.classList.remove('formulario__grupo--correcto');
         });
     } else {
-        document.getElementById('.formulario__mensaje').classList.add('formulario__mensaje-activo');
+        document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo');
     }
 
 });

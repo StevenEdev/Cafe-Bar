@@ -19,11 +19,15 @@
 
     <!-- Jquery -->
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
-    <link rel="stylesheet" href="css/estilos.css" />
+    <!-- <link rel="stylesheet" href="css/estilos.css" /> -->
+
 
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="js/reserva.js" type="text/javascript"></script>
+
+
+    <script src="js/reserva.js"></script>
+
 
     <!-- Vendor CSS Files -->
     <link href="vendor/animate.css/animate.min.css" rel="stylesheet">
@@ -107,7 +111,7 @@
                         <input type="text" class="formulario__input" name="email" id="email" minlength="1" maxlength="50" placeholder="ejemplo@xxx.com">
                     </div>
                     <!-- aqui esta el mensaje de error -->
-                    <p class="formulario__input-error">Por Favor Proporcio un email Valido</p>
+                    <p class="formulario__input-error">Por Favor proporcione un email Valido</p>
                 </dvi>
 
                 <!-- aqui estan los campos del formulario -->
@@ -117,7 +121,7 @@
                         <input type="text" class="formulario__input" name="documento" id="documento" maxlength="10" placeholder="128993994">
                     </div>
                     <!-- aqui esta el mensaje de error -->
-                    <p class="formulario__input-error">Por Favor Proporcio un numero de documento valido</p>
+                    <p class="formulario__input-error">Por Favor proporcione un numero de documento valido</p>
                 </dvi>
 
                 <!-- aqui estan los campos del formulario -->
@@ -127,24 +131,24 @@
                         <input type="text" class="formulario__input" name="telefono" id="telefono" maxlength="10" placeholder="3124567845">
                     </div>
                     <!-- aqui esta el mensaje de error -->
-                    <p class="formulario__input-error">Por Favor Proporcio un numero de Telefono valido</p>
+                    <p class="formulario__input-error">Por Favor proporcione un número de Telefono valido</p>
                 </dvi>
 
                 <dvi class="formulario__grupo" id="grupo__servicio">
                     <label for="servicio" class="label_servicio">servicio</label>
                     <div class="formulario-select">
-                        <select class="formulario__select" aria-label=".form-select-sm example" name="servico" id="servicio">
-                  <option selected>Servicios</option>
-                  <option value="cumpleaños">Cumpleaños</option>
-                  <option value="aniversario">Aniversario</option>
-                  <option value="fiesta">Fiesta Infantil</option>
-                  <option value="Declaraciones">Declaraciones o Propuestas</option>
-                  <option value="despedidas">Despedidasd</option>
-                  <option value="cena">Cena Con Amigos</option>
-                </select>
+                        <select class="formulario__select" aria-label=".form-select-sm example" name="servicio" id="servicio">
+                          <option selected value= 0 >Servicios</option>
+                          <option value="cumpleanios">Cumpleaños</option>
+                          <option value="aniversario">Aniversario</option>
+                          <option value="fiesta">Fiesta Infantil</option>
+                          <option value="propuestas">Declaraciones o Propuestas</option>
+                          <option value="despedidas">Despedidasd</option>
+                          <option value="cena">Cena Con Amigos</option>
+                        </select>
                     </div>
                     <!-- este es el letrero de cuando tenga un error -->
-                    <p class="formulario__input-error">Selecinone Un servicio </p>
+                    <p class="formulario__select-error">Selecione un servicio </p>
                 </dvi>
 
                 <!-- aqui estan los campos del formulario -->
@@ -163,7 +167,7 @@
                 <dvi class="formulario__grupo" id="grupo__fecha">
                     <label for="fecha" class="label_fecha">Fecha de su reserva</label>
                     <div class="formulario-input">
-                        <input type="text" class="formulario__input" name="fecha" id="">
+                        <input type="text" class="formulario__input" name="fecha" id="fecha">
                     </div>
                     <!-- aqui esta el mensaje de error -->
                     <p class="formulario__input-error">Por Favor Proporcio el numero de personas que van a asistir</p>
@@ -173,7 +177,7 @@
                 <dvi class="formulario__grupo" id="grupo__hora">
                     <label for="hora" class="label_hora">Hora de Su reserva</label>
                     <div class="formulario-input">
-                        <input type="text" class="formulario__input" name="hora" id="">
+                        <input type="text" class="formulario__input" name="hora" id="hora">
                     </div>
                     <!-- aqui esta el mensaje de error -->
                     <p class="formulario__input-error">esta hora no Esta disponible</p>
@@ -187,9 +191,9 @@
 
                 <div class="formulario__grupo" id="grupo__terminos">
                     <label class="formulario__label">
-    <input class ="formulario__checkbox" type="checkbox" name="Terminos" id="Terminos">
-    Acepto Todos los Terminos y Condiciones.
-    </label>
+            <input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos">
+            Acepto Todos los Terminos y Condiciones.
+          </label>
                 </div>
                 </div>
                 <p class="formulario__input-error">Por favor Aceptelos terminos y Condiciones</p>
@@ -248,7 +252,8 @@
                             <li><i class="bx bx-chevron-right"></i> <a href="Servicios.html#cumple">Celebración de cumpleaños</a></li>
                             <li><i class="bx bx-chevron-right"></i> <a href="Servicios.html#aniversario">Aniversarios</a></li>
                             <li><i class="bx bx-chevron-right"></i> <a href="Servicios.html#infantil">Fiestas infantiles</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="Servicios.html#propuestas">Declaraciones o propuestas</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="Servicios.html#propuestas">Declaraciones o propuestas</a>
+                            </li>
                             <li><i class="bx bx-chevron-right"></i> <a href="Servicios.html#despedidas">Despedidas</a></li>
                             <li><i class="bx bx-chevron-right"></i> <a href="Servicios.html#cena">Cena con amigos</a></li>
                         </ul>
@@ -272,7 +277,8 @@
     <!-- End Footer -->
 
     <div id="preloader"></div>
-    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
     <!-- Vendor JS Files -->
     <script src="vendor/aos/aos.js"></script>
@@ -284,6 +290,8 @@
     <!-- Template Main JS File -->
     <script src="js/main.js"></script>
     <script src="js/validacion.js"></script>
+
+
 
 </body>
 
