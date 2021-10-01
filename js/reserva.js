@@ -11,5 +11,7 @@ $(document).ready(function() {
         localStorage.setItem("personas", $("#personas").val());
         localStorage.setItem("fecha", $("#fecha").val());
         localStorage.setItem("indicaciones", $("#indicaciones").val());
+
+        $("#formulario")[0].reset();
     });
 });
