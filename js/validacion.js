@@ -1,9 +1,9 @@
 // Esta parte es con la que hice el contador del textarear
 
-const mensaje = document.getElementById('mensaje');
+const indicaciones = document.getElementById('indicaciones');
 const contador = document.getElementById('contador');
 
-mensaje.addEventListener('input', function(e) {
+indicaciones.addEventListener('input', function(e) {
     const target = e.target;
     const longitudMax = target.getAttribute('maxlength');
     const longitudAct = target.value.length;
@@ -30,6 +30,7 @@ const campos = {
     telefono: false,
     servicio: false,
     personas: true,
+    indicaciones: true,
     fecha: true,
     hora: true
 
@@ -116,8 +117,6 @@ inputs.forEach((input) => {
 formulario.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    const terminos = document.getElementById('terminos');
-
     validarSelect("servicio");
 
     if (campos.nombre &&
@@ -130,12 +129,15 @@ formulario.addEventListener("submit", (e) => {
         campos.fecha &&
         terminos.checked) {
 
+        Swal.fire({
+            title: 'Reserva realizada...',
+            text: 'Revisa tu correo para mayor información.',
+            icon: 'success',
+            confirmButtonText: 'Ok'
+        });
 
-
-        formulario.reset();
-
-        document.querySelectorAll('.formulario__grupo--correcto').forEach((error) => {
-            error.classList.remove('formulario__grupo--correcto');
+        document.querySelectorAll('.formulario__grupo-correcto').forEach((error) => {
+            error.classList.remove('formulario__grupo-correcto');
         });
     } else {
         document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo');
