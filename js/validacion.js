@@ -129,6 +129,15 @@ formulario.addEventListener("submit", (e) => {
         campos.fecha &&
         terminos.checked) {
 
+
+        document.getElementById('formulario__mensaje').classList.remove('formulario__mensaje-activo');
+
+        document.querySelectorAll('.formulario__grupo-correcto').forEach((error) => {
+            error.classList.remove('formulario__grupo-correcto');
+        });
+
+
+
         Swal.fire({
             title: 'Reserva realizada...',
             text: 'Revisa tu correo para mayor información.',
@@ -136,9 +145,6 @@ formulario.addEventListener("submit", (e) => {
             confirmButtonText: 'Ok'
         });
 
-        document.querySelectorAll('.formulario__grupo-correcto').forEach((error) => {
-            error.classList.remove('formulario__grupo-correcto');
-        });
     } else {
         document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo');
     }
