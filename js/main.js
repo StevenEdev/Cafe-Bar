@@ -205,9 +205,6 @@
   /**
    * Initiate glightbox 
    */
-  const glightbox = GLightbox({
-    selector: '.glightbox'
-  });
 
   /**
    * Events slider
@@ -275,4 +272,4 @@
     })
   });
 
-})()
+})
