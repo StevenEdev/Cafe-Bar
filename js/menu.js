@@ -25,7 +25,7 @@ function vercarrito() {
 
 // load product items content form JSON file
 function loadJSON() {
-  fetch("/menu.json")
+  fetch("menu.json")
     .then((response) => response.json())
     .then((data) => {
       let html = "";
