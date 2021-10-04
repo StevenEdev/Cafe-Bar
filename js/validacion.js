@@ -136,15 +136,6 @@ formulario.addEventListener("submit", (e) => {
             error.classList.remove('formulario__grupo-correcto');
         });
 
-
-
-        Swal.fire({
-            title: 'Reserva realizada...',
-            text: 'Revisa tu correo para mayor información.',
-            icon: 'success',
-            confirmButtonText: 'Ok'
-        });
-
     } else {
         document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo');
     }

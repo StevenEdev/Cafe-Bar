@@ -12,6 +12,13 @@ $(document).ready(function() {
         localStorage.setItem("fecha", $("#fecha").val());
         localStorage.setItem("indicaciones", $("#indicaciones").val());
 
+        Swal.fire({
+            title: 'Reserva realizada...',
+            text: 'Revisa tu correo para mayor información.',
+            icon: 'success',
+            confirmButtonText: 'Ok'
+        });
+
         $("#formulario")[0].reset();
     });
 });
