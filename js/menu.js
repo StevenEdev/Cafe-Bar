@@ -4,7 +4,6 @@ const carritos = document.querySelector(".carrito");
 
 let cartItemID = 1;
 
-
 eventListeners();
 
 // all event listeners
@@ -13,15 +12,14 @@ function eventListeners() {
     loadJSON();
   });
 
-    // show/hide cart container
-    carritos.addEventListener("click", vercarrito);
-    menuList.addEventListener("click", comprar);
+  // show/hide cart container
+  carritos.addEventListener("click", vercarrito);
+  menuList.addEventListener("click", comprar);
 }
 
 function vercarrito() {
-    location.href = "carrito.html"
+  location.href = "carrito.html";
 }
-
 
 // load product items content form JSON file
 function loadJSON() {
@@ -52,8 +50,6 @@ function loadJSON() {
     });
 }
 
-
-
 // purchase product
 function comprar(e) {
   if (e.target.classList.contains("add-to-cart-btn")) {
@@ -74,7 +70,6 @@ function getProductInfo(product) {
   cartItemID++;
   saveProductInStorage(productInfo);
 }
-
 
 // save the product in the local storage
 function saveProductInStorage(item) {
