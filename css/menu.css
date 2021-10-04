@@ -13,18 +13,11 @@ a {
     text-decoration: none;
 }
 
-a:hover {
-    color: #d9ba85;
-    text-decoration: none;
-}
-
 @media screen and (max-width: 768px) {
     [data-aos-delay] {
         transition-delay: 0 !important;
     }
 }
-
-
 /*--------------------------------------------------------------
   # Header
   --------------------------------------------------------------*/
@@ -303,10 +296,15 @@ a:hover {
     transition: 0.3s;
 }
 
+.descrip:hover{
+    color: #cda45e;
+}
+
 .book-a-table-btn:hover {
     background: #cda45e;
     color: #fff;
 }
+
 
 @media (max-width: 992px) {
     .book-a-table-btn {
@@ -342,8 +340,12 @@ a:hover {
     color: #cda45e;
     background-color: transparent;
     border: none;
+    cursor: pointer;
 }
-
+.add-to-cart-btn:hover {
+    color: #d9ba85;
+    text-decoration: none;
+}
 
 /*Menu*/
 
