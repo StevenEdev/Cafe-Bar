@@ -114,30 +114,48 @@ inputs.forEach((input) => {
     input.addEventListener("blur", ValidarFormulario);
 });
 
-formulario.addEventListener("submit", (e) => {
-    e.preventDefault();
-
-    validarSelect("servicio");
-
-    if (campos.nombre &&
-        campos.email &&
-        campos.documento &&
-        campos.telefono &&
-        campos.servicio &&
-        campos.personas &&
-        campos.hora &&
-        campos.fecha &&
-        terminos.checked) {
 
 
-        document.getElementById('formulario__mensaje').classList.remove('formulario__mensaje-activo');
+$(document).ready(function() {
+    $("#formulario").on("submit", function(event) {
+        event.preventDefault();
 
-        document.querySelectorAll('.formulario__grupo-correcto').forEach((error) => {
-            error.classList.remove('formulario__grupo-correcto');
-        });
+        validarSelect("servicio");
 
-    } else {
-        document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo');
-    }
+        if (campos.nombre &&
+            campos.email &&
+            campos.documento &&
+            campos.telefono &&
+            campos.servicio &&
+            campos.personas &&
+            campos.hora &&
+            campos.fecha &&
+            terminos.checked) {
 
+
+            document.getElementById('formulario__mensaje').classList.remove('formulario__mensaje-activo');
+
+            document.querySelectorAll('.formulario__grupo-correcto').forEach((error) => {
+                error.classList.remove('formulario__grupo-correcto');
+            });
+
+            localStorage.setItem("nombre", $("#nombre").val());
+            localStorage.setItem("email", $("#email").val());
+            localStorage.setItem("documento", $("#documento").val());
+            localStorage.setItem("telefono", $("#telefono").val());
+            localStorage.setItem("servicio", $("#servicio").val());
+            localStorage.setItem("personas", $("#personas").val());
+            localStorage.setItem("fecha", $("#fecha").val());
+            localStorage.setItem("indicaciones", $("#indicaciones").val());
+
+            $("#formulario")[0].reset();
+
+            window.location.replace("confirmar-reserva.html");
+
+
+        } else {
+            document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo');
+        }
+
+    });
 });
