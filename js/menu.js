@@ -54,7 +54,14 @@ function comprar(e) {
   if (e.target.classList.contains("add-to-cart-btn")) {
     let product = e.target.parentElement.parentElement;
     getProductInfo(product);
-    Swal.fire("Gracias", "Ha sido añadido al carrito", "success");
+    Swal.fire({
+      position: "center",
+      icon: "success",
+      title: "Gracias",
+      text: "Ha sido añadido al carrito",
+      showConfirmButton: false,
+      timer: 2000,
+    });
   }
 }
 
