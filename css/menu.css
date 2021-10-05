@@ -546,6 +546,8 @@ a {
     padding: 0 0 30px 0;
     color: #fff;
     font-size: 14px;
+    width: 100%;
+    align-self: flex-end;
 }
 
 #footer .footer-top {
