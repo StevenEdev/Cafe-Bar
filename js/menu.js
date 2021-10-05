@@ -60,7 +60,7 @@ function comprar(e) {
       title: "Gracias",
       text: "Ha sido añadido al carrito",
       showConfirmButton: false,
-      timer: 2000,
+      timer: 1800,
     });
   }
 }
