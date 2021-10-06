@@ -59,7 +59,9 @@ const ValidarFormulario = (e) => {
         case "nombre":
             ValidarCampo(expresiones.nombre, e.target, "nombre_c");
             break;
-
+        case "email":
+                ValidarCampo(expresiones.correo, e.target, "email");
+                break;
         case "telefono":
             ValidarCampo(expresiones.telefono, e.target, "telefono_c");
             break;
