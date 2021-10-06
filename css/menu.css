@@ -619,3 +619,7 @@ a {
         flex-direction: column;
     }
 }
+
+.ide{
+    display:none;
+}

@@ -1,6 +1,11 @@
 .table{	
-	color: #fff;!important
+	color: #fff;
 }
 .td{	
-	color: #fff;!important
+	color: #ffffff;
+}
+
+.total{
+
+	font-size:50px !important;
 }
