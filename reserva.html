@@ -68,8 +68,8 @@
                     <li><a class="nav-link scrollto " href="index.html">Inicio</a></li>
                     <li><a class="nav-link scrollto" href="Nosotros.html">Nosotros</a></li>
                     <li><a class="nav-link scrollto" href="Menu.html">Menu</a></li>
-                    <li><a class="nav-link scrollto" href="Servicios.html">Servicios</a></li>
-                    <li><a class="nav-link scrollto active" href="#">Contacto</a></li>
+                    <li><a class="nav-link scrollto active" href="Servicios.html">Servicios</a></li>
+                    <li><a class="nav-link scrollto" href="#">Contacto</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav>
@@ -155,8 +155,7 @@
                 <dvi class="formulario__grupo" id="grupo__personas">
                     <label for="personas" class="label_personas">Personas que asistiran</label>
                     <div class="formulario-input">
-                        <input type="text" class="formulario__input" name="personas" id="personas" placeholder="1"
-                        maxlength="2">
+                        <input type="text" class="formulario__input" name="personas" id="personas" placeholder="1" maxlength="2">
                     </div>
                     <!-- aqui esta el mensaje de error -->
                     <p class="formulario__input-error">Por favor proporcione el numero de personas que van a asistir( hasta 15 personas)</p>
@@ -168,17 +167,17 @@
                 <dvi class="formulario__grupo" id="grupo__fecha">
                     <label for="fecha" class="label_fecha">Fecha de su reserva</label>
                     <div class="formulario-input">
-                        <input type="text" class="formulario__input" name="fecha" id="fecha">
+                        <input type="date" class="formulario__input" name="fecha" id="fecha">
                     </div>
                     <!-- aqui esta el mensaje de error -->
-                    <p class="formulario__input-error">Por favor proporcione una fecha valida (Fecha aaaa-mm-dd.)</p>
+                    <p class="formulario__input-error">Por favor proporcione una fecha valida (Fecha aaaa-mm-dd)</p>
                 </dvi>
 
                 <!-- aqui estan los campos del formulario -->
                 <dvi class="formulario__grupo" id="grupo__hora">
                     <label for="hora" class="label_hora">Hora de Su reserva</label>
                     <div class="formulario-input">
-                        <input type="text" class="formulario__input" name="hora" id="hora">
+                        <input type="time" class="formulario__input" name="hora" id="hora">
                     </div>
                     <!-- aqui esta el mensaje de error -->
                     <p class="formulario__input-error">Verifique si la hora Correctamente (Sistema horario de 24 horas hh:mm)</p>

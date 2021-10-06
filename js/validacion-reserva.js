@@ -1,3 +1,21 @@
+// $(function() {
+//     $("#fecha").datepicker({
+//         autoSize: true,
+//         dayNames: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
+//         dayNamesMin: ['Do', 'Lu', 'Ma', 'Mi', 'Ju', 'Vi', 'Sá'],
+//         firstDay: 1,
+//         monthNames: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+//         monthNamesShort: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
+//         dateFormat: 'dd/mm/yy',
+//         minDate: 0,
+//         changeYear: true,
+//         changeMonth: true,
+//         /*numberOfMonths: 2,
+//         showButtonPanel: true*/
+//         /*changeYear: true*/
+//     });
+// });
+
 // Esta parte es con la que hice el contador del textarear
 
 const indicaciones = document.getElementById('indicaciones');
@@ -149,7 +167,6 @@ $(document).ready(function() {
             campos.fecha &&
             terminos.checked) {
 
-
             document.getElementById('formulario__mensaje').classList.remove('formulario__mensaje-activo');
 
             document.querySelectorAll('.formulario__grupo-correcto').forEach((error) => {
@@ -162,13 +179,12 @@ $(document).ready(function() {
             localStorage.setItem("telefono", $("#telefono").val());
             localStorage.setItem("servicio", $("#servicio").val());
             localStorage.setItem("personas", $("#personas").val());
-            localStorage.setItem("fecha", $("#fecha").val());
+            localStorage.setItem("fecha", $("#fecha").val() + " " + $("#hora").val());
             localStorage.setItem("indicaciones", $("#indicaciones").val());
 
             $("#formulario")[0].reset();
 
             window.location.replace("confirmar-reserva.html");
-
 
         } else {
             document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo');
