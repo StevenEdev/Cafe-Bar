@@ -109,7 +109,7 @@ $(document).ready(function() {
     $("#formulario").on("submit", function(event) {
         event.preventDefault();
 
-        validarSelect("servicio");
+        
 
         if (campos.nombre &&
             campos.email &&
