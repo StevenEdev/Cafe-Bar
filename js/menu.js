@@ -1,6 +1,6 @@
 // variables and constants
 const menuList = document.querySelector(".menu-container");
-const carritos = document.querySelector(".carrito");
+//const carritos = document.querySelector(".carrito");
 
 let cartItemID = 1;
 
@@ -13,7 +13,7 @@ function eventListeners() {
   });
 
   // show/hide cart container
-  carritos.addEventListener("click", vercarrito);
+  //carritos.addEventListener("click", vercarrito);
   menuList.addEventListener("click", comprar);
 }
 
@@ -30,6 +30,7 @@ function loadJSON() {
       data.forEach((product) => {
         html += `
                 <div class="col-lg-6 menu-item filter-starters">
+                    <a class="ide">${product.id}</a>
                     <img src="${product.imgSrc}" class="menu-img" alt="">
                     <div class="menu-content">
                         <a href="#" class="nombre">${product.title}</a>
@@ -45,7 +46,7 @@ function loadJSON() {
       menuList.innerHTML = html;
     })
     .catch((error) => {
-      alert(`User live server or local server`);
+      //alert(`User live server or local server`);
       //URL scheme must be "http" or "https" for CORS request. You need to be serving your index.html locally or have your site hosted on a live server somewhere for the Fetch API to work properly.
     });
 }
@@ -68,7 +69,8 @@ function comprar(e) {
 // get product info after add to cart button click
 function getProductInfo(product) {
   let productInfo = {
-    id: cartItemID,
+    //id: cartItemID,
+    id:  product.querySelector(".ide").textContent,
     imgSrc: product.querySelector(".menu-img").src,
     title: product.querySelector(".nombre").textContent,
     descripcion: product.querySelector(".descrip").textContent,
@@ -85,10 +87,27 @@ function saveProductInStorage(item) {
   localStorage.setItem("menu", JSON.stringify(products));
 }
 
+
 // get all the products info if there is any in the local storage
 function getProductFromStorage() {
   return localStorage.getItem("menu")
     ? JSON.parse(localStorage.getItem("menu"))
     : [];
   // returns empty array if there isn't any product info
+}
+
+function eliminarProductoLocalStorage(){
+  let productosLS;
+  productoID = product.querySelector(".ide").textContent,
+  //Obtenemos el arreglo de productos
+  productosLS = this.getProductFromStorage();
+  //Comparar el id del producto borrado con LS
+  productosLS.forEach(function(productoLS, index){
+      if(productoLS.id === productoID){
+          productosLS.splice(index, 1);
+      }
+  });
+
+  //Añadimos el arreglo actual al LS
+  localStorage.setItem('menu', JSON.stringify(productosLS));
 }
