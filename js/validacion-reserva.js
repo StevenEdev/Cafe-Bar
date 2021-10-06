@@ -41,7 +41,7 @@ const expresiones = {
     telefono: /^\d{7,14}$/, // 7 a 14 numeros.
     documento: /^\d{4,10}$/, // 4 a 10 digitos.
     personas: /^\d{1,2}$/, // 1 a 2 digitos.
-    fecha: /^\d{4}([\-/.])(0?[1-9]|1[1-2])\1(3[01]|[12][0-9]|0?[1-9])$/, // Fecha aaaa-mm-dd.
+    fecha: /^\S{10}$/, // Fecha aaaa-mm-dd.
     horas: /^([01]?[0-9]|2[0-3]):[0-5][0-9]$/, // Sistema horario de 24 horas hh:mm
 
 };
