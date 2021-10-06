@@ -43,18 +43,15 @@
     <link href="css/flotante.css" rel="stylesheet">
     <link href="css/car.css" rel="stylesheet">
     <script>
-        $(document).ready(function(){    
-                                 
-                /*Obtener datos almacenados*/
-                var Valor = localStorage.getItem("ValorF");
-                /*Mostrar datos almacenados*/      
-                document.getElementById("total").innerHTML = Valor;
-                
-             
+        $(document).ready(function() {
+
+            /*Obtener datos almacenados*/
+            var Valor = localStorage.getItem("ValorF");
+            /*Mostrar datos almacenados*/
+            document.getElementById("total").innerHTML = Valor;
+
+
         });
-
-
-
     </script>
 
 
@@ -113,13 +110,13 @@
                 <div class="formulario__grupo" id="grupo__nombre_c">
                     <label for="nombre" class="label_nombre">Nombre Completo</label>
                     <div class="formulario-input">
-                        <input type="text" class="formulario__input_c" name="nombre" id="nombre_c" minlength="1" maxlength="40" placeholder="Escriba su nombre completo">
+                        <input type="text" class="formulario__input" name="nombre" id="nombre_c" minlength="1" maxlength="40" placeholder="Escriba su nombre completo">
                     </div>
                     <!-- aqui esta el mensaje de error -->
                     <p class="formulario__input-error">En este campo no pueden ir numeros o caracteres especiales(#,%,&-1232) </p>
                 </div>
 
-                <div class="formulario__grupo" id="grupo__email">
+                <div class="formulario__grupo" id="grupo__email_c">
                     <label for="email" class="label_email">Email</label>
                     <div class="formulario-input">
                         <input type="text" class="formulario__input" name="email" id="email_c" minlength="1" maxlength="50" placeholder="ejemplo@xxx.com">
@@ -138,9 +135,9 @@
                     <p class="formulario__input-error">Por favor proporcione un número de Telefono valido</p>
                 </div>
 
-                <div >
-                    <label >Tu compra es de :</label>
-                    <div >
+                <div>
+                    <label>Tu compra es de :</label>
+                    <div>
                         <p id="total" class="total"></p>
                     </div>
                     <!-- aqui esta el mensaje de error -->

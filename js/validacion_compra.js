@@ -1,21 +1,3 @@
-// $(function() {
-//     $("#fecha").datepicker({
-//         autoSize: true,
-//         dayNames: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
-//         dayNamesMin: ['Do', 'Lu', 'Ma', 'Mi', 'Ju', 'Vi', 'Sá'],
-//         firstDay: 1,
-//         monthNames: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
-//         monthNamesShort: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
-//         dateFormat: 'dd/mm/yy',
-//         minDate: 0,
-//         changeYear: true,
-//         changeMonth: true,
-//         /*numberOfMonths: 2,
-//         showButtonPanel: true*/
-//         /*changeYear: true*/
-//     });
-// });
-
 // Esta parte es con la que hice el contador del textarear
 
 const indicaciones = document.getElementById('indicaciones_c');
@@ -47,11 +29,10 @@ const expresiones = {
 };
 
 const campos = {
-    nombre: false,
-    telefono: false,
+    nombre_c: false,
+    telefono_c: false,
+    email_c: false,
     indicaciones: true
-
-
 }
 
 const ValidarFormulario = (e) => {
@@ -59,7 +40,9 @@ const ValidarFormulario = (e) => {
         case "nombre":
             ValidarCampo(expresiones.nombre, e.target, "nombre_c");
             break;
-
+        case "email":
+            ValidarCampo(expresiones.correo, e.target, "email_c");
+            break;
         case "telefono":
             ValidarCampo(expresiones.telefono, e.target, "telefono_c");
             break;
@@ -95,34 +78,6 @@ const ValidarCampo = (expresiones, input, campo) => {
 
 };
 
-function validarSelect(campo) {
-    var servicio = document.getElementById(campo);
-
-    if (servicio.value == 0 ||
-        servicio.value == "") {
-        document.getElementById(`grupo__${campo}`).classList.add("formulario__select-error");
-        document.getElementById(`grupo__${campo}`).classList.remove(".formulario__select-correcto");
-        document.querySelector(`#grupo__${campo} .formulario__select-error`)
-            .classList.add("formulario__select-error-activo");
-        campos[campo] = false;
-    } else {
-        document
-            .getElementById(`grupo__servicio`)
-            .classList.remove("formulario__select-error");
-        document
-            .getElementById(`grupo__servicio`)
-            .classList.add(".formulario__select-correcto");
-        document
-            .querySelector(`#grupo__servicio .formulario__select-error`)
-            .classList.remove("formulario__select-error-activo");
-        campos[campo] = true;
-    }
-
-    console.log(servicio.value + " -- " + campos[campo]);
-
-}
-
-
 inputs.forEach((input) => {
     input.addEventListener("keyup", ValidarFormulario);
     input.addEventListener("blur", ValidarFormulario);
@@ -134,13 +89,11 @@ $(document).ready(function() {
     $("#formulario").on("submit", function(event) {
         event.preventDefault();
 
-        validarSelect("servicio");
+        console.log(campos);
 
-        if (campos.nombre &&
-            campos.email &&
-           
-            campos.telefono &&
-           
+        if (campos.nombre_c &&
+            campos.email_c &&
+            campos.telefono_c &&
             terminos.checked) {
 
             document.getElementById('formulario__mensaje').classList.remove('formulario__mensaje-activo');
@@ -149,10 +102,10 @@ $(document).ready(function() {
                 error.classList.remove('formulario__grupo-correcto');
             });
 
-            localStorage.setItem("nombre", $("#nombre_c").val());
-            localStorage.setItem("email", $("#email").val());
-            localStorage.setItem("telefono", $("#telefono_c").val());
-            localStorage.setItem("indicaciones", $("#indicaciones_c").val());
+            localStorage.setItem("nombre_c", $("#nombre_c").val());
+            localStorage.setItem("email_c", $("#email_c").val());
+            localStorage.setItem("telefono_c", $("#telefono_c").val());
+            localStorage.setItem("indicaciones_c", $("#indicaciones_c").val());
 
             $("#formulario")[0].reset();
 

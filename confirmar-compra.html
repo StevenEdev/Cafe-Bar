@@ -48,6 +48,7 @@
         let nombreCliente = localStorage.getItem("nombre_c");
         let emailCliente = localStorage.getItem("email_c");
         let indicaciones = localStorage.getItem("indicaciones_c");
+        let valorCompra = localStorage.getItem("ValorF");
 
 
         (function() {
@@ -56,13 +57,15 @@
         $(document).ready(function() {
             //configuración del correo de la cuenta emailJS de
 
-          
+
             $("#datosCliente").append("<td>" + nombreCliente + "</td>");
             $("#datosCliente").append("<td>" + telefonoCliente + "</td>");
             $("#datosCliente").append("<td>" + emailCliente + "</td>");
-            $("#datosReserva").append("<td>" + indicaciones + "</td>");
 
-            $("#btn-reserva").click(function() {
+            $("#datosCompra").append('<td colspan="2">' + indicaciones + "</td>");
+            $("#datosCompra").append("<td>" + valorCompra + "</td>");
+
+            $("#btn-compra").click(function() {
                 sendMail();
             });
         });
@@ -76,27 +79,28 @@
                 telefonoCliente: telefonoCliente,
                 emailCliente: emailCliente,
                 indicaciones: indicaciones,
+                valorCompra: valorCompra,
 
             };
 
             emailjs
-                .send('email-cafe-bar', 'email_reservas', parametrosCorreo)
+                .send('email-cafe-bar', 'email_pedidos', parametrosCorreo)
                 .then(function() {
                     Swal.fire({
                         title: 'Compra realizada...',
                         text: 'Revisa tu correo para mayor información.',
                         icon: 'success',
-                        confirmButtonText: 'Ok'
+                        timer: 1000,
                     });
                     localStorage.clear();
                     window.location.replace("index.html");
                 }, function(error) {
-                    console.log('FAILED...', error);
+                    console.log('Error...', error);
                     Swal.fire({
-                        title: 'Reserva fallida...',
-                        text: 'Se genero in error al realizar la reserva, intenta de nuevo.',
+                        title: 'Compra fallida...',
+                        text: 'Se genero in error al realizar la compra, intenta de nuevo.',
                         icon: 'error',
-                        confirmButtonText: 'Ok'
+                        timer: 1000,
                     });
                 });
         }
@@ -156,27 +160,29 @@
 
                         <td>Nombre</td>
                         <td>Teléfono</td>
+                        <td>Email</td>
 
                     </tr>
                     <tr id="datosCliente">
                     </tr>
                     <tr>
-                        <td>Email</td>
                     </tr>
 
                     <tr class="negrilla">
 
-                        <td>Indicaciones</td>
+                        <td colspan="2">Indicaciones</td>
+
+                        <td>Valor Total</td>
                     </tr>
 
-                    <tr id="datosReserva">
+                    <tr id="datosCompra">
                     </tr>
                     <tr>
                         <td></td>
                     </tr>
                     <tr>
-                        <td colspan="8" style="text-align:center;">
-                            <button id="btn-reserva" class="reserva-btn-enviar">
+                        <td colspan="3" style="text-align:center;">
+                            <button id="btn-compra" class="reserva-btn-enviar">
                                 Confirmar compra
                             </button>
                         </td>
@@ -268,8 +274,6 @@
 
     <!-- Template Main JS File -->
     <script src="js/main.js "></script>
-    <script src="js/validacion-compra.js"></script>
-
 
 </body>
 

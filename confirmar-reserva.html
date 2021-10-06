@@ -98,17 +98,17 @@
                         title: 'Reserva realizada...',
                         text: 'Revisa tu correo para mayor información.',
                         icon: 'success',
-                        confirmButtonText: 'Ok'
+                        timer: 1000,
                     });
                     localStorage.clear();
                     window.location.replace("index.html");
                 }, function(error) {
-                    console.log('FAILED...', error);
+                    console.log('Error...', error);
                     Swal.fire({
                         title: 'Reserva fallida...',
                         text: 'Se genero in error al realizar la reserva, intenta de nuevo.',
                         icon: 'error',
-                        confirmButtonText: 'Ok'
+                        timer: 1000,
                     });
                 });
         }
@@ -189,7 +189,7 @@
                         <td></td>
                     </tr>
                     <tr>
-                        <td colspan="8" style="text-align:center;">
+                        <td colspan="4" style="text-align:center;">
                             <button id="btn-reserva" class="reserva-btn-enviar">
                                 Confirmar reserva
                             </button>
