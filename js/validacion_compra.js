@@ -48,6 +48,7 @@ const expresiones = {
 
 const campos = {
     nombre: false,
+    email: false,
     telefono: false,
     indicaciones: true
 
@@ -127,7 +128,7 @@ $(document).ready(function() {
             });
 
             localStorage.setItem("nombre", $("#nombre_c").val());
-            localStorage.setItem("email", $("#email").val());
+            localStorage.setItem("email", $("#email_c").val());
             localStorage.setItem("telefono", $("#telefono_c").val());
             localStorage.setItem("indicaciones", $("#indicaciones_c").val());
 
