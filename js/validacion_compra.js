@@ -95,32 +95,7 @@ const ValidarCampo = (expresiones, input, campo) => {
 
 };
 
-function validarSelect(campo) {
-    var servicio = document.getElementById(campo);
 
-    if (servicio.value == 0 ||
-        servicio.value == "") {
-        document.getElementById(`grupo__${campo}`).classList.add("formulario__select-error");
-        document.getElementById(`grupo__${campo}`).classList.remove(".formulario__select-correcto");
-        document.querySelector(`#grupo__${campo} .formulario__select-error`)
-            .classList.add("formulario__select-error-activo");
-        campos[campo] = false;
-    } else {
-        document
-            .getElementById(`grupo__servicio`)
-            .classList.remove("formulario__select-error");
-        document
-            .getElementById(`grupo__servicio`)
-            .classList.add(".formulario__select-correcto");
-        document
-            .querySelector(`#grupo__servicio .formulario__select-error`)
-            .classList.remove("formulario__select-error-activo");
-        campos[campo] = true;
-    }
-
-    console.log(servicio.value + " -- " + campos[campo]);
-
-}
 
 
 inputs.forEach((input) => {
