@@ -95,19 +95,3 @@ function getProductFromStorage() {
     : [];
   // returns empty array if there isn't any product info
 }
-
-function eliminarProductoLocalStorage(){
-  let productosLS;
-  productoID = product.querySelector(".ide").textContent,
-  //Obtenemos el arreglo de productos
-  productosLS = this.getProductFromStorage();
-  //Comparar el id del producto borrado con LS
-  productosLS.forEach(function(productoLS, index){
-      if(productoLS.id === productoID){
-          productosLS.splice(index, 1);
-      }
-  });
-
-  //Añadimos el arreglo actual al LS
-  localStorage.setItem('menu', JSON.stringify(productosLS));
-}
