@@ -47,8 +47,50 @@
 
             /*Obtener datos almacenados*/
             var Valor = localStorage.getItem("ValorF");
+
+            /*Obtener datos almacenados*/
+            var productos = localStorage.getItem("menu") ?
+                JSON.parse(localStorage.getItem("menu")) : [];
+
+            var productosString = "";
+            var productosTabla =
+                `<thead>
+                    <tr class="negrilla">
+                        <td><b>Cantidad<b></td>
+                        <td><b>Producto<b></td>
+                        <td><b>Precio<b></td>
+                    </tr>
+                </thead>
+                <tbody>`;
+
+            productos.forEach(function(producto) {
+
+                let row =
+                    `<tr >
+                        <td>${producto.cantidad}</td>
+                        <td>${producto.title}</td>
+                        <td>${producto.precio}</td>
+                    </tr>`;
+
+                productosString += " Producto: " + producto.title + "<br> Cantidad: " + producto.cantidad + "<br> Precio (Unidad): " + producto.precio + "<br><br>";
+
+                productosTabla += row;
+
+            });
+
+            localStorage.setItem("productos", productosString);
+
+            console.log(localStorage.getItem("productos"))
+
+            productosTabla += `<tr class="negrilla">
+                                <td><b>Total de la compra</b></td>
+                                <td colspan="2"><b>${Valor}</b></td>
+                            </tr>
+                        </tbody>
+                    </table>`;
+
             /*Mostrar datos almacenados*/
-            document.getElementById("total").innerHTML = Valor;
+            document.getElementById("elementos").innerHTML = productosTabla;
 
 
         });
@@ -96,12 +138,19 @@
 
         <!-- ======= reserva Section ======= -->
         <section id="contact" class="contact">
-            <div class="container" data-aos="fade-up">
-
+            <div class="container">
                 <div class="section-title">
                     <h2>Ya casi termina tu compra </h2>
-                    <p>Completa tus datos</p>
+                    <p>Productos de la compra</p>
                 </div>
+                <table class="elementos" id="elementos"></table>
+            </div>
+
+            <br>
+            <br>
+
+            <div class="section-title">
+                <p>Completa tus datos</p>
             </div>
 
             <form class="formulario" id="formulario">
@@ -135,30 +184,25 @@
                     <p class="formulario__input-error">Por favor proporcione un número de Telefono valido</p>
                 </div>
 
-                <div>
-                    <label>Tu compra es de :</label>
-                    <div>
-                        <p id="total" class="total"></p>
-                    </div>
-                    <!-- aqui esta el mensaje de error -->
-                    <p class="formulario__input-error">Por favor proporcione un número de Telefono valido</p>
-                </div>
-
                 <div class="box">
                     <label>¿Recomendaciones?</label>
                     <textarea rows="2" maxlength="150" class="indicaciones" id="indicaciones_c"></textarea>
                     <div id="contador">0/150</div>
                 </div>
 
+
                 <div class="formulario__grupo" id="grupo__terminos">
                     <label class="formulario__label">
-            <input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos">
+                        <input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos">
             Acepto Todos los Terminos y Condiciones.
-          </label>
+                    </label>
                 </div>
                 </div>
                 <p class="formulario__input-error">Por favor Aceptelos terminos y Condiciones</p>
                 </dvi>
+
+                <br>
+                <br>
 
                 <div class="formulario__grupo-btn-enviar">
                     <button type="submit" class="reserva-btn-enviar" id="reserva-btn-enviar">Completar compra</button>

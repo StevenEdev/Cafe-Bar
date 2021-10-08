@@ -18,6 +18,8 @@ a {
         transition-delay: 0 !important;
     }
 }
+
+
 /*--------------------------------------------------------------
   # Header
   --------------------------------------------------------------*/
@@ -296,7 +298,7 @@ a {
     transition: 0.3s;
 }
 
-.descrip:hover{
+.descrip:hover {
     color: #cda45e;
 }
 
@@ -305,25 +307,12 @@ a {
     color: #fff;
 }
 
-
 @media (max-width: 992px) {
     .book-a-table-btn {
         margin: 0 15px 0 0;
         padding: 8px 20px;
         display: flex !important;
     }
-}
-
-.button-descargar {
-    width: 40%;
-    border: none;
-    padding: 4px;
-    border-radius: 20px;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -ms-border-radius: 20px;
-    -o-border-radius: 20px;
-    box-shadow: -2px 4px 7px 1px rgba(0, 0, 0, 0.6);
 }
 
 .button-descargar:hover {
@@ -342,10 +331,12 @@ a {
     border: none;
     cursor: pointer;
 }
+
 .add-to-cart-btn:hover {
     color: #d9ba85;
     text-decoration: none;
 }
+
 
 /*Menu*/
 
@@ -353,7 +344,7 @@ a {
     padding: 60px 0px 15px;
 }
 
-.menu{
+.menu {
     padding-bottom: 30px;
 }
 
@@ -460,6 +451,7 @@ a {
     justify-content: center;
     text-align: center;
 }
+
 #footer {
     background: black;
     padding: 0 0 30px 0;
@@ -620,6 +612,6 @@ a {
     }
 }
 
-.ide{
-    display:none;
+.ide {
+    display: none;
 }

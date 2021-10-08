@@ -38,9 +38,6 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js">
     </script>
 
-    <script type="text/javascript">
-    </script>
-
     <script>
         //jquery para reservas
 
@@ -49,6 +46,7 @@
         let emailCliente = localStorage.getItem("email_c");
         let indicaciones = localStorage.getItem("indicaciones_c");
         let valorCompra = localStorage.getItem("ValorF");
+        let productosCompra = localStorage.getItem("productos");
 
 
         (function() {
@@ -62,8 +60,9 @@
             $("#datosCliente").append("<td>" + telefonoCliente + "</td>");
             $("#datosCliente").append("<td>" + emailCliente + "</td>");
 
-            $("#datosCompra").append('<td colspan="2">' + indicaciones + "</td>");
+            $("#datosProductos").append('<td colspan="3">' + productosCompra + "</td>");
             $("#datosCompra").append("<td>" + valorCompra + "</td>");
+            $("#datosCompra").append('<td colspan="2">' + indicaciones + "</td>");
 
             $("#btn-compra").click(function() {
                 sendMail();
@@ -80,6 +79,7 @@
                 emailCliente: emailCliente,
                 indicaciones: indicaciones,
                 valorCompra: valorCompra,
+                productosCompra: productosCompra,
 
             };
 
@@ -91,6 +91,7 @@
                         text: 'Revisa tu correo para mayor información.',
                         icon: 'success',
                         timer: 1000,
+                        showConfirmButton: false,
                     });
                     localStorage.clear();
                     window.location.replace("index.html");
@@ -101,6 +102,7 @@
                         text: 'Se genero in error al realizar la compra, intenta de nuevo.',
                         icon: 'error',
                         timer: 1000,
+                        showConfirmButton: false,
                     });
                 });
         }
@@ -169,10 +171,16 @@
                     </tr>
 
                     <tr class="negrilla">
+                        <td colspan="3">Productos</td>
+                    </tr>
+
+                    <tr id="datosProductos">
+                    </tr>
+
+                    <tr class="negrilla">
+                        <td>Valor Total</td>
 
                         <td colspan="2">Indicaciones</td>
-
-                        <td>Valor Total</td>
                     </tr>
 
                     <tr id="datosCompra">
