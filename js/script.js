@@ -78,7 +78,7 @@ function eliminarCarrito(elemento) {
     $(this).closest('tr').remove();
   });
   
-  
+  location.reload()
 }
 
 //Calcular montos
