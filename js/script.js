@@ -62,9 +62,23 @@ function leerLocalStorageCompra() {
 
 function eliminarCarrito(elemento) {
   let borrarElemento = "basura" + elemento;
-  alert(borrarElemento);
-  //var node = document.getElementById(borrarElemento);
-  //node.parentNode.removeChild(node);
+  //alert(elemento);
+  let listastorage = JSON.parse(localStorage.getItem("menu"));
+  //console.log(listastorage)
+  //console.log("---------------------------------/----------------------") 
+  var index = listastorage.findIndex(el=> el.id == elemento);
+  //console.log(index);
+  listastorage.splice(index,1)
+  let listastorageJSON = JSON.stringify(listastorage);
+  localStorage.setItem("menu",listastorageJSON) 
+  
+  
+  $(document).on('click', '.borrarl', function (event) {
+    event.preventDefault();
+    $(this).closest('tr').remove();
+  });
+  
+  
 }
 
 //Calcular montos
